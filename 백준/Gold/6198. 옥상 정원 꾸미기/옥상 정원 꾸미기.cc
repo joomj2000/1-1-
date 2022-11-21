@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -17,16 +16,14 @@ int main() {
 		//cin >> t;
 		scanf("%d", &t);
 
-		while (S.empty() == false&&S.top() <= t) {
+		while (S.top() < t) {
 			//if (S.empty())break;
 			//else 
 			S.pop();
-			//if (S.empty())break;
+			if (S.empty())break;
 		}
-		//if (S.empty()||S.top()>t)
-			S.push(t);
-		//if(S.empty()==false)
-			num += (S.size()-1);
+		if (S.empty()||S.top()>t)S.push(t);
+		if(!S.empty())num += (S.size()-1);
 		//if (S.empty() || S.top().high < t) printf("0 ");
 
 		//else cout << S.top().num<<" ";
@@ -38,16 +35,5 @@ int main() {
 	}
 	cout << num;
 
-
-
-	/*
-	6
-1
-2
-3
-4
-5
-7
-*/
 	
 }
